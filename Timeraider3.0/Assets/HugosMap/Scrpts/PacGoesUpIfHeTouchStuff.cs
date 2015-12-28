@@ -5,7 +5,7 @@ public class PacGoesUpIfHeTouchStuff : MonoBehaviour {
 
 	public float moveSpeed = 0.1f;
 	public float x;
-	bool PacGoesUpIfHeTouchWallElseDown = false;
+	public bool PacGoesUpIfHeTouchWallElseDown = false;
 	// Use this for initialization
 	void Start () {
 	
@@ -29,13 +29,6 @@ public class PacGoesUpIfHeTouchStuff : MonoBehaviour {
 	public void PacNotHeadOnRoof(){
 		PacGoesUpIfHeTouchWallElseDown = false;
 	}
-
-	public void PacDash(){
-		moveSpeed = moveSpeed * 2;
-	}
-	public void PacStopedDash(){
-		moveSpeed = moveSpeed / 2;
-	}
 	// Update is called once per frame
 	void FixedUpdate () {
 		if (PacGoesUpIfHeTouchWallElseDown){
@@ -45,5 +38,13 @@ public class PacGoesUpIfHeTouchStuff : MonoBehaviour {
 //			PacGoesUpIfHeTouchWallElseDown = false;
 //		}
 	
+	}
+
+
+	public void PacDash(){
+		moveSpeed = moveSpeed * 6;
+	}
+	public void PacStopedDash(){
+		moveSpeed = moveSpeed / 6;
 	}
 }

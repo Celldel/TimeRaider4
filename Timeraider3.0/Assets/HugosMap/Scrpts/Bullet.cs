@@ -4,8 +4,13 @@ using System.Collections;
 public class Bullet : MonoBehaviour {
 
 	public int bulletSpeed;
-	public int travelLength;
+	public float travelTime;
 	Vector3 spawnPoint;
+	bool shooting;
+	float time;
+	public float startDelay;
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -16,14 +21,18 @@ public class Bullet : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-
+		
+		time += Time.deltaTime;
 		transform.Translate (Vector3.right * Time.deltaTime * bulletSpeed);
 
-		if (gameObject.transform.position.x > travelLength + spawnPoint.x) {
 
-			gameObject.transform.position = spawnPoint;
 
+		if (time > travelTime && shooting) {
+			transform.position = spawnPoint;
+			time = 0;
 		}
 
 	}
+
+
 }

@@ -9,6 +9,7 @@ public class FallingObstacle : MonoBehaviour {
 	void Start ()
 	{
 		rb = gameObject.GetComponent<Rigidbody> ();
+		MB = GameObject.FindGameObjectWithTag("Player").GetComponent<MoveBox> ();
 	}
 
 	void Release ()
