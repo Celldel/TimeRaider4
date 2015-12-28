@@ -15,6 +15,7 @@ public class DownWithPack : MonoBehaviour {
 	public bool jumpKeyPressed = true;
 
 	public float timer4HowLongJump;
+	public float jumpheight;
 
 	public float x;
 	public float y = 0;
@@ -26,16 +27,9 @@ public class DownWithPack : MonoBehaviour {
 	public bool pacCanNowJump = true;
 
 	bool pacDash = false;
-
-//	//______PacWalkUp_______
-//	Vector3[] raycastDir;
-//	Vector3[] offset;
-//
-//	raycastDir = new Vector3[] {Vector3.forward, -Vector3.forward, Vector3.right,-Vector3.right};
-
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 
 	public void PacIsDashing(){
@@ -81,7 +75,7 @@ public class DownWithPack : MonoBehaviour {
 
 		if (jumpKeyPressed && !pacDontTouchTheFloor && pacCanNowJump){
 			if (Input.GetKeyDown(jumpUp)){
-					x = 7;	
+				x = jumpheight;	
 			}
 		}
 
@@ -100,12 +94,6 @@ public class DownWithPack : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-
-
-
-
-
-
 	
 		y += Time.deltaTime;
 

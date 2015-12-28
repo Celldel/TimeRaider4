@@ -8,10 +8,12 @@ public class PacCollisions : MonoBehaviour {
 	public GameBrain GB;
 
 
+
 	// Use this for initialization
 	void Start () {
 
 		GB = GameObject.Find ("GameBrain").GetComponent<GameBrain> ();
+
 
 		if (teleports.Length != 0) {
 			for (int i = 0; i < GB.lastLevel + 1; i++) {
@@ -48,7 +50,6 @@ public class PacCollisions : MonoBehaviour {
 
 			if (GB.armoured) {
 				GB.Invoke ("LoseArmour", 0);
-				Debug.Log ("I was hit with armour");
 
 			} else {
 				GB.Invoke ("LoseLife", 0);
@@ -62,6 +63,10 @@ public class PacCollisions : MonoBehaviour {
 		if (other.gameObject.tag == "Key") {
 
 			GB.Invoke ("SetDeadPellet", 0);
+		}
+
+		if (other.gameObject.tag == "YouFellDown") {
+			GetComponent<MoveBox> ().YouFellDown();
 		}
 	}
 }
