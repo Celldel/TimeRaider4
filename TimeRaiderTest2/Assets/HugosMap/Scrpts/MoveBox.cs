@@ -16,6 +16,7 @@ public class MoveBox : MonoBehaviour {
 
 	Vector3[] pacMoveDir;
 	public bool herculesMode;
+	public bool marioMode;
 
 	//__________Dash___________________
 	public KeyCode dash = KeyCode.LeftShift;
@@ -38,14 +39,18 @@ public class MoveBox : MonoBehaviour {
 	Vector3[] vecDir;
 	Vector3[] offsetpush;
 
-
+	//	
+	//
+	//	raycastDir = new Vector3[] {Vector3.forward, -Vector3.forward, Vector3.right,-Vector3.right};
 
 
 	void Start () {
 		//___________Används till de första Raycasten som sparar boolvärden_______
 		movement = new Vector3[] {Vector3.forward, -Vector3.forward, Vector3.right, -Vector3.right,Vector3.forward, Vector3.forward};
 		offset = new Vector3[]{new Vector3(dictanceFromPac,0,0),new Vector3(dictanceFromPac,0,0),new Vector3(0,0,dictanceFromPac),new Vector3(0,0,dictanceFromPac)};
-	
+
+//		offsetUpAndDown = new Vector3[]{new Vector3(0,0.75f,0),new Vector3(0,0.25f,0)};
+
 		pacMoveDir = new Vector3[] {transform.forward, -transform.forward, transform.right, -transform.right, Vector3.zero};
 
 		vecDir = new Vector3[] {transform.right,transform.right,transform.forward,transform.forward, Vector3.zero};
@@ -53,20 +58,20 @@ public class MoveBox : MonoBehaviour {
 			new Vector3(movePacFromWallLength,0,0),new Vector3(-movePacFromWallLength,0,0)};
 	}
 	void Update () {
-	
+
 		//___________Trycka på en knapp?___________
 
 		if (!herculesMode){
-		if(Input.GetKey(upMovement)){
-			nextDirection = 0;
-		}else if(Input.GetKey(downMovement)){
-			nextDirection = 1;
-		}else if(Input.GetKey(rightMovement)){
-			nextDirection = 2;
-		}else if(Input.GetKey(leftMovement)){
-			nextDirection = 3;
-		}
-		}
+			if(Input.GetKey(upMovement) && !marioMode){
+				nextDirection = 0;
+			}else if(Input.GetKey(downMovement) && !marioMode){
+				nextDirection = 1;
+			}else if(Input.GetKey(rightMovement)){
+				nextDirection = 2;
+			}else if(Input.GetKey(leftMovement)){
+				nextDirection = 3;
+			}
+			}
 
 		else {
 			if (Input.GetKey (rightMovement) && direction != 3) {
@@ -122,7 +127,6 @@ public class MoveBox : MonoBehaviour {
 	public void PacManActivatedDash(){
 		dashActivated = true;
 	}
-
 	public void YouFellDown(){
 		herculesMode = false;
 	}
@@ -141,14 +145,15 @@ public class MoveBox : MonoBehaviour {
 
 		//_________________Raycast som flyttar Pac från vägg____________________
 
+		 
 		if (!herculesMode) {
 			if (direction != 4 && Physics.Raycast (transform.position + offsetpush [direction], vecDir [direction], out hit, movePacFromWallLength) && hit.collider.tag == "Wall") {
-		
+
 				transform.position += -vecDir [direction] * Time.deltaTime * moveSpeed;
 			}
 			if (direction != 4 && Physics.Raycast (transform.position + offsetpush [direction], -vecDir [direction], out hit, movePacFromWallLength) && hit.collider.tag == "Wall") {
 				transform.position += vecDir [direction] * Time.deltaTime * moveSpeed;
-		
+
 			}
 		} else {
 			if (Physics.Raycast (transform.position + offsetpush [0], vecDir [0], out hit, movePacFromWallLength) && hit.collider.tag == "Wall") {
@@ -160,7 +165,6 @@ public class MoveBox : MonoBehaviour {
 
 			}
 		}
-			
 
 		//______Dash__________________
 		if (dashing && !herculesMode){
@@ -171,8 +175,19 @@ public class MoveBox : MonoBehaviour {
 		}
 
 
+
+
+
+
+
+
+		}
+
+
+
+
+
 	}
-}
 
 
 

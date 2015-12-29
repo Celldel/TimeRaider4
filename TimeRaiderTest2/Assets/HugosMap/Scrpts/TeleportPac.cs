@@ -8,7 +8,7 @@ public class TeleportPac : MonoBehaviour {
 	public KeyCode rightMovement;
 	public KeyCode leftMovement;
 	public KeyCode teleportButton;
-	int nextDirection = 2;
+	public int nextDirection = 2;
 	public bool herculesMode;
 
 	//____Pac Get Teleport PowerUp________
@@ -23,7 +23,6 @@ public class TeleportPac : MonoBehaviour {
 	Vector3[] raycastStartpoint2;
 	Vector3[] raycastDirection;
 	public float distanceFromTransform = 0.5f;
-	public float teleportDistance;
 
 	RaycastHit[] hitsFromPac;
 	RaycastHit[] hits2Pac;
@@ -161,11 +160,10 @@ public class TeleportPac : MonoBehaviour {
 					teleportLocation[nextDirection].position + new Vector3(-distanceFromTransform,0,0),
 					teleportLocation[nextDirection].position + new Vector3(distanceFromTransform,0,0)};
 
-				hitsFromPac = Physics.RaycastAll(transform.position,raycastDirection[nextDirection], teleportDistance,  pacLayerMask | wallLayermask);
+					hitsFromPac = Physics.RaycastAll(transform.position,raycastDirection[nextDirection], teleportDistance,  pacLayerMask | wallLayermask);
 				hits2Pac = Physics.RaycastAll(raycastStartpoint1[nextDirection],-raycastDirection[nextDirection], teleportDistance,  pacLayerMask | wallLayermask);
 				hits3Pac = Physics.RaycastAll(teleportLocation[nextDirection].position,-raycastDirection[nextDirection], teleportDistance,  pacLayerMask | wallLayermask);
 				hits4Pac = Physics.RaycastAll(raycastStartpoint2[nextDirection],-raycastDirection[nextDirection], teleportDistance,  pacLayerMask | wallLayermask);
-
 				if (hitsFromPac.Length != hits2Pac.Length && hitsFromPac.Length != hits3Pac.Length && hitsFromPac.Length != hits4Pac.Length)
 				{
 					PacTeleport();			
@@ -211,6 +209,7 @@ public class TeleportPac : MonoBehaviour {
 			MakePacTransparent();
 		}
 		else if (colorPac.a < 1){
+			Debug.Log("Ey");
 			colorPac.a += Time.deltaTime;
 			GetComponent<MeshRenderer>().material.color = colorPac;
 		}
