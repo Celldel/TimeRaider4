@@ -1,0 +1,195 @@
+fileFormatVersion: 2
+guid: 72c78e7a8ec7b4c98b690bb3a14dd3c0
+timeCreated: 1450363548
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: group1
+    100002: head_down1
+    100004: head_up1
+    100006: ikHandle10
+    100008: ikHandle11
+    100010: ikHandle2
+    100012: ikHandle3
+    100014: ikHandle6
+    100016: ikHandle6 1
+    100018: ikHandle7
+    100020: ikHandle8
+    100022: ikHandle9
+    100024: largebin1
+    100026: leftleg11
+    100028: leftleg12_1
+    100030: leftleg13_1
+    100032: leftleg14_1
+    100034: leftleg21
+    100036: leftleg22_1
+    100038: leftleg23_1
+    100040: leftleg24_1
+    100042: leftleg31
+    100044: leftleg32_1
+    100046: leftleg33_1
+    100048: leftleg34_1
+    100050: leftleg41_1
+    100052: leftleg42_1
+    100054: leftleg43_1
+    100056: leftleg44_1
+    100058: mainjoint
+    100060: //RootNode
+    100062: nurbsCircle1
+    100064: nurbsCircle10
+    100066: nurbsCircle11
+    100068: nurbsCircle2
+    100070: nurbsCircle3
+    100072: nurbsCircle4
+    100074: nurbsCircle5
+    100076: nurbsCircle6
+    100078: nurbsCircle7
+    100080: nurbsCircle8
+    100082: nurbsCircle9
+    100084: rightleg11
+    100086: rightleg12_1
+    100088: rightleg13_1
+    100090: rightleg14_1
+    100092: rightleg21
+    100094: rightleg22_1
+    100096: rightleg23_1
+    100098: rightleg24_1
+    100100: rightleg31
+    100102: rightleg32_1
+    100104: rightleg33_1
+    100106: rightleg34_1
+    100108: rightleg41
+    100110: rightleg42_1
+    100112: rightleg43_1
+    100114: rightleg44_1
+    100116: smallbin1
+    100118: tubsmallbintolargebinright1
+    400000: group1
+    400002: head_down1
+    400004: head_up1
+    400006: ikHandle10
+    400008: ikHandle11
+    400010: ikHandle2
+    400012: ikHandle3
+    400014: ikHandle6
+    400016: ikHandle6 1
+    400018: ikHandle7
+    400020: ikHandle8
+    400022: ikHandle9
+    400024: largebin1
+    400026: leftleg11
+    400028: leftleg12_1
+    400030: leftleg13_1
+    400032: leftleg14_1
+    400034: leftleg21
+    400036: leftleg22_1
+    400038: leftleg23_1
+    400040: leftleg24_1
+    400042: leftleg31
+    400044: leftleg32_1
+    400046: leftleg33_1
+    400048: leftleg34_1
+    400050: leftleg41_1
+    400052: leftleg42_1
+    400054: leftleg43_1
+    400056: leftleg44_1
+    400058: mainjoint
+    400060: //RootNode
+    400062: nurbsCircle1
+    400064: nurbsCircle10
+    400066: nurbsCircle11
+    400068: nurbsCircle2
+    400070: nurbsCircle3
+    400072: nurbsCircle4
+    400074: nurbsCircle5
+    400076: nurbsCircle6
+    400078: nurbsCircle7
+    400080: nurbsCircle8
+    400082: nurbsCircle9
+    400084: rightleg11
+    400086: rightleg12_1
+    400088: rightleg13_1
+    400090: rightleg14_1
+    400092: rightleg21
+    400094: rightleg22_1
+    400096: rightleg23_1
+    400098: rightleg24_1
+    400100: rightleg31
+    400102: rightleg32_1
+    400104: rightleg33_1
+    400106: rightleg34_1
+    400108: rightleg41
+    400110: rightleg42_1
+    400112: rightleg43_1
+    400114: rightleg44_1
+    400116: smallbin1
+    400118: tubsmallbintolargebinright1
+    4300000: tubsmallbintolargebinright1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: tubsmallbintolargebinright1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 10
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
