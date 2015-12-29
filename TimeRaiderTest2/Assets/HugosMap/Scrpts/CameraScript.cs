@@ -35,7 +35,7 @@ public class CameraScript : MonoBehaviour {
 		Vector3 targetPosition = lookHere.TransformPoint (targetVector);
 		
 
-		if (hercules) {
+		if (hercules || marioTowerMode) {
 			transform.position = Vector3.SmoothDamp (transform.position, new Vector3 (0, targetPosition.y, targetPosition.z), ref velocity, smooth);
 		} else if (marioRunMode) {
 			transform.position = Vector3.SmoothDamp (transform.position, targetPosition, ref velocity, smooth);
