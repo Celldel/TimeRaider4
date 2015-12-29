@@ -76,7 +76,6 @@ public class DownWithPack : MonoBehaviour {
 		if (jumpKeyPressed && !pacDontTouchTheFloor && pacCanNowJump){
 			if (Input.GetKeyDown(jumpUp)){
 				x = jumpheight;	
-				Debug.Log("Kan truck på Space");
 			}
 		}
 

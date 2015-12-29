@@ -7,7 +7,7 @@ public class Bullet : MonoBehaviour {
 	public float travelTime;
 	Vector3 spawnPoint;
 	bool shooting;
-	float time;
+	float timer;
 	public float startDelay;
 
 
@@ -22,14 +22,18 @@ public class Bullet : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		
-		time += Time.deltaTime;
-		transform.Translate (Vector3.right * Time.deltaTime * bulletSpeed);
+		timer += Time.deltaTime;
+		if (shooting) {
+			transform.Translate (Vector3.right * Time.deltaTime * bulletSpeed);
+		}
 
-
-
-		if (time > travelTime && shooting) {
+		if (timer > startDelay && !shooting) {
+			shooting = true;
+			timer = 0;
+		}
+		else if (timer > travelTime && shooting) {
 			transform.position = spawnPoint;
-			time = 0;
+			timer = 0;
 		}
 
 	}
