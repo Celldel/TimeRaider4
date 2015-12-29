@@ -57,12 +57,10 @@ public class EnemyMovement : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider other){
-		Debug.Log ("Ey");
 
 		if (other.gameObject == patrolPoints [index]) {
 			index = (index + 1) % patrolPoints.Length;
 
-			Debug.Log ("collided");
 			Invoke ("Patrol", 0);
 		}
 	}
