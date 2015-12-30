@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 600cd5c8b54564f1aa35c94147598f01
-timeCreated: 1451486551
+guid: 752da4c2a23d24a60a79f5a0b68f1de4
+timeCreated: 1451485321
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: polySurface22
+    4300000: kandelaber
     9500000: //RootNode
   materials:
     importMaterials: 1
