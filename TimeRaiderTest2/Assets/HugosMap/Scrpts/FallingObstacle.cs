@@ -3,28 +3,31 @@ using System.Collections;
 
 public class FallingObstacle : MonoBehaviour {
 
-	Rigidbody rb;
 	public MoveBox MB;
+	public float speed;
+	public GameObject[] meteors;
 
 	void Start ()
 	{
-		rb = gameObject.GetComponent<Rigidbody> ();
 		MB = GameObject.FindGameObjectWithTag("Player").GetComponent<MoveBox> ();
 	}
 
-	void Release ()
+	void FixedUpdate ()
 	{
-		rb.useGravity = true;
+		meteors[0].transform.Translate (Vector3.right * Time.deltaTime * speed);
 	}
 
 	void OnCollisionEnter(Collision other)
 	{
 		if (other.gameObject.tag != "Player" && !MB.dashing) {
-			rb.constraints = RigidbodyConstraints.FreezeAll;
+			
+			meteors [0].SetActive (false);
+			meteors [1].SetActive (true);
 
 		} else if (MB.dashing) {
 
 			Destroy (this.gameObject);
+
 		}
 	}
 }

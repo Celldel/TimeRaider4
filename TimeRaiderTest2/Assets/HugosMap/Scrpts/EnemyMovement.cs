@@ -7,8 +7,6 @@ public class EnemyMovement : MonoBehaviour {
 	public GameObject pacman;
 	public GameObject[] patrolPoints;
 	int index = 0;
-	public bool thisIsABigEnemy;
-	public float[] bigEnemySpeedAndAcc = new float[2];
 	public float[] huntingEnemySpeedAndAcc = new float[2];
 	public float[] patrollingEnemySpeedAndAcc = new float[2];
 
@@ -17,23 +15,12 @@ public class EnemyMovement : MonoBehaviour {
 
 
 	void Start () {
-		if (thisIsABigEnemy) {
-			InvokeRepeating ("BigEnemyHunt", 0, 0.1f);
-		} else {
+		
 			Invoke ("Patrol", 0);
-		}
 
 	
 	}
-	
-	void BigEnemyHunt ()
-	{
-		NavMeshAgent agent = GetComponent<NavMeshAgent> ();
 
-		agent.speed = bigEnemySpeedAndAcc[0];
-		agent.acceleration = bigEnemySpeedAndAcc[1];
-		agent.destination = pacman.transform.position;
-	}
 
 	void HuntPacman ()
 	{
