@@ -12,7 +12,6 @@ public class TeleportPac : MonoBehaviour {
 	public bool herculesMode;
 	public float teleportDistance = 3;
 
-
 	//____Pac Get Teleport PowerUp________
 	public bool pacActivateTeleport;
 
