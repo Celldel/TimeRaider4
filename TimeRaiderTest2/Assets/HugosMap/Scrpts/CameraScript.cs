@@ -24,7 +24,7 @@ public class CameraScript : MonoBehaviour {
 		} else if (marioRunMode) {
 			targetVector = new Vector3 (4, 6, -22);
 		} else if (marioTowerMode) {
-			targetVector = new Vector3 (0, 6, -22);
+			targetVector = new Vector3 (0, 6, -20);
 		} 
 			
 	}
