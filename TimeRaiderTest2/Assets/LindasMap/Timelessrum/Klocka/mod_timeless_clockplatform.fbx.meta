@@ -1,0 +1,144 @@
+fileFormatVersion: 2
+guid: 05417f5c49a244bc186aa855d44e8a75
+timeCreated: 1451404437
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: kugghjullevel1_1
+    100002: kugghjullevel1_2
+    100004: kugghjullevel1_3
+    100006: kugghjullevel2_1
+    100008: kugghjullevel2_5
+    100010: kugghjullevel3_1
+    100012: kugghjullevel3_6
+    100014: kugghjullevel3_8
+    100016: kugghjullevel3_9
+    100018: minutvisare
+    100020: mittenklocka
+    100022: //RootNode
+    100024: plattform
+    100026: sekundvisare
+    100028: timvisare
+    400000: kugghjullevel1_1
+    400002: kugghjullevel1_2
+    400004: kugghjullevel1_3
+    400006: kugghjullevel2_1
+    400008: kugghjullevel2_5
+    400010: kugghjullevel3_1
+    400012: kugghjullevel3_6
+    400014: kugghjullevel3_8
+    400016: kugghjullevel3_9
+    400018: minutvisare
+    400020: mittenklocka
+    400022: //RootNode
+    400024: plattform
+    400026: sekundvisare
+    400028: timvisare
+    2300000: kugghjullevel1_1
+    2300002: kugghjullevel1_2
+    2300004: kugghjullevel1_3
+    2300006: kugghjullevel2_1
+    2300008: kugghjullevel2_5
+    2300010: kugghjullevel3_1
+    2300012: kugghjullevel3_6
+    2300014: kugghjullevel3_8
+    2300016: kugghjullevel3_9
+    2300018: minutvisare
+    2300020: mittenklocka
+    2300022: plattform
+    2300024: sekundvisare
+    2300026: timvisare
+    3300000: kugghjullevel1_1
+    3300002: kugghjullevel1_2
+    3300004: kugghjullevel1_3
+    3300006: kugghjullevel2_1
+    3300008: kugghjullevel2_5
+    3300010: kugghjullevel3_1
+    3300012: kugghjullevel3_6
+    3300014: kugghjullevel3_8
+    3300016: kugghjullevel3_9
+    3300018: minutvisare
+    3300020: mittenklocka
+    3300022: plattform
+    3300024: sekundvisare
+    3300026: timvisare
+    4300000: plattform
+    4300002: mittenklocka
+    4300004: timvisare
+    4300006: minutvisare
+    4300008: sekundvisare
+    4300010: kugghjullevel3_6
+    4300012: kugghjullevel2_1
+    4300014: kugghjullevel3_1
+    4300016: kugghjullevel3_8
+    4300018: kugghjullevel2_5
+    4300020: kugghjullevel3_9
+    4300022: kugghjullevel1_3
+    4300024: kugghjullevel1_1
+    4300026: kugghjullevel1_2
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

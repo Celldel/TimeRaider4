@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 624ff2eed40f0447ebdc8e3850570dba
-timeCreated: 1451396125
+guid: c7a09267b0a3a4505a2440c30092f4cf
+timeCreated: 1451486780
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pSphere77
+    4300000: wallcorner
     9500000: //RootNode
   materials:
     importMaterials: 1
