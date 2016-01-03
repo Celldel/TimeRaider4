@@ -20,7 +20,7 @@ public class CameraScript : MonoBehaviour {
 	void Start ()
 	{
 		if (hercules || mazeMode) {
-			targetVector = new Vector3 (0, 5, -7);
+			targetVector = new Vector3 (0, 8, -7);
 		} else if (marioRunMode) {
 			targetVector = new Vector3 (4, 6, -22);
 		} else if (marioTowerMode) {
