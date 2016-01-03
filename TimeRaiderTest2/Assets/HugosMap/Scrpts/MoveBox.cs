@@ -16,6 +16,8 @@ public class MoveBox : MonoBehaviour {
 
 	Vector3[] pacMoveDir;
 	public bool herculesMode;
+	public bool pacHitWallagainright = true;
+	public bool pacHitWallagainleft = true;
 	public bool marioMode;
 
 	//__________Dash___________________
@@ -39,12 +41,17 @@ public class MoveBox : MonoBehaviour {
 	Vector3[] vecDir;
 	Vector3[] offsetpush;
 
+
+	Vector3[] movePacFromWallWhileDashish;
+
 	//	
 	//
 	//	raycastDir = new Vector3[] {Vector3.forward, -Vector3.forward, Vector3.right,-Vector3.right};
 
 
 	void Start () {
+
+		movePacFromWallWhileDashish = new Vector3[] {new Vector3(1,0,1), new Vector3(-1,0,1)};
 		//___________Används till de första Raycasten som sparar boolvärden_______
 		movement = new Vector3[] {Vector3.forward, -Vector3.forward, Vector3.right, -Vector3.right,Vector3.forward, Vector3.forward};
 		offset = new Vector3[]{new Vector3(dictanceFromPac,0,0),new Vector3(dictanceFromPac,0,0),new Vector3(0,0,dictanceFromPac),new Vector3(0,0,dictanceFromPac)};
@@ -74,13 +81,17 @@ public class MoveBox : MonoBehaviour {
 			}
 
 		else {
-			if (Input.GetKey (rightMovement) && direction != 3) {
-				direction = 2;
-			} else if (Input.GetKey (leftMovement)) {
-				direction = 3;
-			} else if (herculesMode){
-				direction = 4;
-			}
+
+
+			if (Input.GetKey (rightMovement) && direction != 3 && pacHitWallagainright) {
+					direction = 2;
+			} else if (Input.GetKey (leftMovement) && pacHitWallagainleft) {
+					direction = 3;
+				} else if (herculesMode){
+					direction = 4;
+				}
+
+
 	}
 
 
@@ -136,16 +147,18 @@ public class MoveBox : MonoBehaviour {
 
 		// ________________PacManMovement__________
 
+
+
+
+		Debug.DrawRay(transform.position, movePacFromWallWhileDashish [0] * movePacFromWallLength , Color.black);
+		Debug.DrawRay(transform.position, movePacFromWallWhileDashish [1] * movePacFromWallLength, Color.black);
+
+
+
 		if (herculesMode){
 			transform.position += transform.forward * Time.deltaTime * moveSpeed;
 		}
 
-
-		transform.position += pacMoveDir[direction] * Time.deltaTime * moveSpeed;
-
-		//_________________Raycast som flyttar Pac från vägg____________________
-
-		 
 		if (!herculesMode) {
 			if (direction != 4 && Physics.Raycast (transform.position + offsetpush [direction], vecDir [direction], out hit, movePacFromWallLength) && hit.collider.tag == "Wall") {
 
@@ -156,15 +169,32 @@ public class MoveBox : MonoBehaviour {
 
 			}
 		} else {
-			if (Physics.Raycast (transform.position + offsetpush [0], vecDir [0], out hit, movePacFromWallLength) && hit.collider.tag == "Wall") {
-
+			if (Physics.Raycast (transform.position, vecDir [0], out hit, movePacFromWallLength) && hit.collider.tag == "Wall") {
+				pacHitWallagainleft = false;
 				transform.position += -vecDir [0] * Time.deltaTime * moveSpeed;
+				if(dashing){
+					transform.position += -vecDir [0] * Time.deltaTime * 2* moveSpeed;
+				}
+			}else{
+				pacHitWallagainleft = true;
 			}
-			if (Physics.Raycast (transform.position + offsetpush [0], -vecDir [0], out hit, movePacFromWallLength) && hit.collider.tag == "Wall") {
-				transform.position += vecDir [0] * Time.deltaTime * moveSpeed;
-
+			if (Physics.Raycast (transform.position, -vecDir [0], out hit, movePacFromWallLength) && hit.collider.tag == "Wall") {
+				transform.position += vecDir [0] * Time.deltaTime *  moveSpeed;
+				pacHitWallagainright = false;
+				if(dashing){
+					transform.position += vecDir [0] * Time.deltaTime * 2* moveSpeed;
+				}
+			}else{
+				pacHitWallagainright = true;
 			}
 		}
+
+		transform.position += pacMoveDir[direction] * Time.deltaTime * moveSpeed;
+
+		//_________________Raycast som flyttar Pac från vägg____________________
+
+		 
+
 
 		//______Dash__________________
 		if (dashing && !herculesMode){
